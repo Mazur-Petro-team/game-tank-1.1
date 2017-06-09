@@ -1,0 +1,81 @@
+body{
+  background-color:black;
+}
+
+h1{
+	color:white;
+	text-align:center;
+	font-family:arial,san-serif;
+}
+
+.game-arena{
+	width:1200px;
+	height:300px;
+	margin:3% auto;
+	border: 30px solid;
+	border-image:url(../img/bricks.png);
+	border-image-slice: 100% 0%;
+  border-image-repeat: round;
+	overflow:hidden;
+}
+span{
+	margin:-30px -30px -30px 0;
+	width:1140px;
+	height:300px;
+	border: 30px solid;
+	border-image:url(../img/bricks.png);
+	border-image-slice: 0% 100%;
+	border-image-repeat: round;
+	display:block;
+  overflow:hidden;
+}
+
+#tank {
+  width: 85px;
+  height: 85px;
+  position: relative;
+	background: url(../img/Battle_Tank__2.png) center no-repeat ;
+  background-size: 100%;
+}
+
+.tank{
+	width: 85px;
+  height: 85px;
+	position:relative;
+	top: -75px;
+  left: 91.5%;
+	background: url(../img/Battle_Tank__2.png) center no-repeat ;
+	background-size: 100%;
+	transform: rotate(180deg);
+}
+
+.tank-shoot-bullet {
+  width: 75px;
+  height: 75px;
+	margin:0;
+	padding:0;
+	position:relative;
+	top:5px;
+	left:80px;
+  background: url(../img/bullet.png) no-repeat;
+	background-size:100%;
+	display:inline-block;
+	float:left;
+	z-index:-10;
+}
+
+.tank-bullet-death{
+	width:85px;
+	height:85px;
+	position:relative;
+	top:0;
+	left:-8px;
+	background: url(../img/Fireball.png) no-repeat ;
+	background-size: 100%;
+	display:block;
+	animation-name: Death;
+  animation-duration: 2s; 
+  animation-timing-function: ease-in-out; 
+	visibility: hidden;
+}
+ 
