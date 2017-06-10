@@ -1,3 +1,7 @@
+
+@import '@keyframes.css';
+@import 'keyCod.css';
+
 body{
   background-color:black;
 }
@@ -6,22 +10,24 @@ h1{
 	color:white;
 	text-align:center;
 	font-family:arial,san-serif;
+	margin-bottom:0;
 }
 
 .game-arena{
 	width:1200px;
-	height:300px;
-	margin:3% auto 0;
+	height:250px;
+	margin:2% auto 0;
 	border: 30px solid;
 	border-image:url(../img/bricks.png);
 	border-image-slice: 100% 0%;
   border-image-repeat: round;
 	overflow:hidden;
 }
-span{
+
+.border{
 	margin:-30px -30px -30px 0;
 	width:1140px;
-	height:300px;
+	height:250px;
 	border: 30px solid;
 	border-image:url(../img/bricks.png);
 	border-image-slice: 0% 100%;
@@ -30,23 +36,22 @@ span{
   overflow:hidden;
 }
 
-#tank {
-  width: 85px;
-  height: 85px;
+#tank,.tank{
+  width: 100px;
+  height: 73px;
   position: relative;
-	background: url(../img/Battle_Tank__2.png) center no-repeat ;
+	background: url(../img/Battle_Tank.png) center no-repeat ;
   background-size: 100%;
+	float:left;
+	display:block;
+	margin:0;
+	padding:0;
 }
 
 .tank{
-	width: 85px;
-  height: 85px;
-	position:relative;
-	top: -75px;
-  left: 91.5%;
-	background: url(../img/Battle_Tank__2.png) center no-repeat ;
-	background-size: 100%;
 	transform: rotate(180deg);
+	left:940px;
+	bottom:0;
 }
 
 .tank-shoot-bullet {
@@ -55,11 +60,11 @@ span{
 	margin:0;
 	padding:0;
 	position:relative;
-	top:5px;
-	left:80px;
+	top:0;
+	left:100px;
   background: url(../img/bullet.png) no-repeat;
 	background-size:100%;
-	display:inline-block;
+
 	float:left;
 	z-index:-10;
 }
@@ -69,13 +74,14 @@ span{
 	height:85px;
 	position:relative;
 	top:0;
-	left:-8px;
+	left:0;
 	background: url(../img/Fireball.png) no-repeat ;
 	background-size: 100%;
-	display:block;
+	display:inline-block;
 	animation-name: Death;
   animation-duration: 2s; 
   animation-timing-function: ease-in-out; 
+	transform: rotate(0deg);
 	visibility: hidden;
 }
  
