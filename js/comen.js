@@ -16,31 +16,30 @@ function keyControls() {
 		var KeyCode_Z     = 90;
 
     if (e.keyCode == KeyCode_LEFT) {
-      el.style.left = (parseInt(el.style.left) - 4) + 'px',
+      el.style.left = (parseInt(el.style.left) - 5) + 'px',
 			document.getElementById('tank').style.transform = 'rotate(180deg)';
     }
     else if (e.keyCode == KeyCode_RIGHT) {
-      el.style.left = (parseInt(el.style.left) + 4) + 'px';
+      el.style.left = (parseInt(el.style.left) + 5) + 'px';
 			document.getElementById('tank').style.transform = 'rotate(0deg)';
     }
     else if (e.keyCode == KeyCode_UP) {
-      el.style.top = (parseInt(el.style.top) - 4) + 'px',
+      el.style.top = (parseInt(el.style.top) - 5) + 'px',
 			document.getElementById('tank').style.transform = 'rotate(-90deg)';
     }
     else if (e.keyCode == KeyCode_DOWN) {
-      el.style.top = (parseInt(el.style.top) + 4) + 'px',
+      el.style.top = (parseInt(el.style.top) + 5) + 'px',
 			document.getElementById('tank').style.transform = 'rotate(90deg)';
     }
     else if(e.keyCode == KeyCode_SPACE){
       shoot();
 			setTimeout(function() { 
 				$('.tank-shoot-bullet').remove();
-			}, 100);
+			}, 750);
     }
 		else if(e.keyCode == KeyCode_CTRL){
       deash();
 		  setTimeout(function() { 
-				$('.tank-bullet-death').remove(); 
 				$('.tank').remove();
 				$('#tank').remove();
 			}, 2000);
@@ -56,7 +55,7 @@ function neveTank() {
   $('.border').append(neveTanks);
 }
 
-function deash() {
+function deash() { 
   var fireball = $('<div class="tank-bullet-death" />');  
 	$('.death').append(fireball);
 }
@@ -67,6 +66,6 @@ function shoot() {
 }
 
 function TankPosition() {
-  document.getElementById('tank').style.top = '-1px',
+  document.getElementById('tank').style.top = '132px',
   document.getElementById('tank').style.left = '0px';
 }
