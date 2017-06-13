@@ -35,15 +35,16 @@ function keyControls() {
       shoot();
 			setTimeout(function() { 
 				$('.tank-shoot-bullet').remove();
-			}, 750);
+			}, 590);
     }
 		else if(e.keyCode == KeyCode_CTRL){
       deash();
 		  setTimeout(function() { 
 				$('.tank').remove();
 				$('#tank').remove();
+				$('<div class="death-of-tank" />').remove();
 			}, 2000);
-    }
+		}	
 		else if (e.keyCode == KeyCode_Z) {
       neveTank();
     }
@@ -56,16 +57,16 @@ function neveTank() {
 }
 
 function deash() { 
-  var fireball = $('<div class="tank-bullet-death" />');  
-	$('.death').append(fireball);
+  var fireball = $('<div class="death-of-tank" />');  
+	$('.death').append(fireball);	
 }
-
+ 
 function shoot() {
   var bullet = $('<div class="tank-shoot-bullet" />');
   $('#tank').append(bullet);
 }
 
 function TankPosition() {
-  document.getElementById('tank').style.top = '132px',
+  document.getElementById('tank').style.top = '146px',
   document.getElementById('tank').style.left = '0px';
 }
